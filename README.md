@@ -163,7 +163,9 @@ Below are qualitative results showing the model's detection capabilities.
 
 *Left: Ground Truth | Right: Model Prediction*
 
-*(Replace `path/to/your/detection_sample_image.png` with the actual path to your saved prediction image)*
+![Output 1](images/output1.png)
+![Output 2](images/output2.png)
+![Output 3](images/output3.png)
 
 ---
 
