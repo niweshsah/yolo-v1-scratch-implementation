@@ -1,0 +1,31 @@
+names:
+- aeroplane
+- bicycle
+- bird
+- boat
+- bottle
+- bus
+- car
+- cat
+- chair
+- cow
+- diningtable
+- dog
+- horse
+- motorbike
+- person
+- pottedplant
+- sheep
+- sofa
+- train
+- tvmonitor
+nc: 20
+roboflow:
+  license: CC BY 4.0
+  project: voc-2012-ybyxu
+  url: https://universe.roboflow.com/greg-lee/voc-2012-ybyxu/dataset/1
+  version: 1
+  workspace: greg-lee
+test: ../test/images
+train: VOC-2012-1/train/images
+val: VOC-2012-1/valid/images
