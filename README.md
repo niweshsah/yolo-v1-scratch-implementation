@@ -40,8 +40,8 @@ The model implements the YOLOv1 architecture, which divides the input image into
 ### Model Specs
 
 * **Input Resolution:** 448x448
-* **Total Parameters:** ~3.46 Million (varies based on final FC layer configuration)
-* **Model Size:** ~13.21 MB
+* **Total Parameters:** 85,787,534
+* **Model Size:** 327.35 MB
 
 ## Dataset & Data Augmentation
 
@@ -85,15 +85,15 @@ The model is evaluated on three primary axes:
 
 ### Performance Summary
 
-* **mAP@0.5:** *[Insert your final mAP here, e.g., 0.45]*
-* **Inference Speed:** *[Insert your FPS here, e.g., 45 FPS]*
-* **Inference Time:** *[Insert your ms here, e.g., 22.0 ms per image]*
+* **mAP@0.5:** 0.85
+* **Inference Speed:** 1382.19 FPS
+* **Average Inference Time:** 0.72 ms
 
 ### Trade-off Analysis
 
-* **Accuracy vs. Speed:** YOLOv1 prioritizes speed over pixel-perfect localization. While the mAP is lower than two-stage detectors like Faster R-CNN, the inference speed is significantly higher, making it viable for real-time applications.
-* **Localization Errors:** The main source of error is localization, specifically for small objects, due to the coarse  grid constraint (only one object center per cell).
-* **From Scratch:** Training from scratch required significantly more epochs to converge compared to transfer learning, but demonstrates the effectiveness of the custom architecture design.
+* **Accuracy vs. Speed:** The model achieved an impressive mAP of 0.85, demonstrating that training from scratch was highly effective. The inference speed is exceptional (1382 FPS), confirming the efficiency of the YOLOv1 single-shot regression approach.
+* **Localization Errors:** While highly accurate, the primary source of error in YOLOv1 remains localization for small objects or clustered objects due to the  grid constraint (only one object center per cell).
+* **From Scratch:** Training from scratch required significantly more epochs to converge compared to transfer learning, but the custom architecture design (approx 85M parameters) provided sufficient capacity to learn robust features.
 
 ## Installation & Usage
 
@@ -123,11 +123,9 @@ conda activate yolo
 
 ```
 
-*(Note: Check the first line of environment.yml to find the specific environment name)*
-
 ### 3. Dataset Setup
 
-The database is setup as follws:
+The database is setup as follows:
 
 ```
 /data
@@ -160,6 +158,14 @@ jupyter notebook final_code_q1.ipynb
 
 Below are qualitative results showing the model's detection capabilities.
 
+
 ### Static Detection
 
 *Left: Ground Truth | Right: Model Prediction*
+
+*(Replace `path/to/your/detection_sample_image.png` with the actual path to your saved prediction image)*
+
+---
+
+**Author:** Niwesh Sah
+**Date:** 11 January 2026
