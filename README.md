@@ -97,19 +97,38 @@ The model is evaluated on three primary axes:
 
 ## Installation & Usage
 
-### Prerequisites
+### 1. Clone the Repository
 
-* Python 3.8+
-* PyTorch
-* Torchvision
-* OpenCV
-* Matplotlib
-* Pandas
+```bash
+git clone https://github.com/niweshsah/yolo-v1-scratch-implementation.git
+cd yolo-v1-scratch-implementation
 
-### Setup
+```
 
-1. Clone the repository.
-2. Download the PASCAL VOC dataset and structure it as follows:
+### 2. Environment Setup
+
+A `environment.yml` file is provided to replicate the exact Conda environment used for training.
+
+**Create the environment:**
+
+```bash
+conda env create -f environment.yml
+
+```
+
+**Activate the environment:**
+
+```bash
+conda activate yolo
+
+```
+
+*(Note: Check the first line of environment.yml to find the specific environment name)*
+
+### 3. Dataset Setup
+
+The database is setup as follws:
+
 ```
 /data
   /train
@@ -121,17 +140,21 @@ The model is evaluated on three primary axes:
 
 ```
 
+Open `final_code_q1.ipynb` and update the `dataset_location` variable to point to this `/data` folder.
 
-3. Update the `dataset_location` path in the notebook.
+### 4. Running the Code
 
-### Running the Code
-
-Open the Jupyter Notebook `final_code_q1.ipynb` and execute the cells sequentially to:
+Open the Jupyter Notebook and execute the cells sequentially to:
 
 1. Initialize the model.
 2. Train from scratch.
 3. Evaluate on the test set.
 4. Visualize predictions.
+
+```bash
+jupyter notebook final_code_q1.ipynb
+
+```
 
 ## Visualizations
 
@@ -140,14 +163,3 @@ Below are qualitative results showing the model's detection capabilities.
 ### Static Detection
 
 *Left: Ground Truth | Right: Model Prediction*
-
-### Real-Time Detection
-
-*(Click the link below to view the full video demonstration)*
-
-[Link to Demo Video on YouTube/Drive]
-
----
-
-**Author:** [Your Name]
-**Date:** [Current Date]

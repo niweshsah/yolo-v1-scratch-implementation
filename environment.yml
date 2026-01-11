@@ -1,4 +1,4 @@
-name: ADLR
+name: yolo
 channels:
   - defaults
   - conda-forge
